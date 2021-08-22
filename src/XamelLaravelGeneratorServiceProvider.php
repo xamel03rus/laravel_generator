@@ -3,6 +3,7 @@
 namespace Xamel\LaravelGenerator;
 
 use Illuminate\Support\ServiceProvider;
+use Xamel\LaravelGenerator\Services\LaravelGeneratorService;
 
 class XamelLaravelGeneratorServiceProvider extends ServiceProvider
 {
@@ -13,6 +14,9 @@ class XamelLaravelGeneratorServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->app->singleton('laravel_generator_service', function () {
+            return new LaravelGeneratorService();
+        });
     }
 
     /**
