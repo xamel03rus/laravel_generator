@@ -1,0 +1,38 @@
+{
+    "name": "xamel/laravel-generator",
+    "type": "package",
+    "description": "Laravel visual class generator",
+    "keywords": ["laravel-generator", "xamel"],
+    "license": "MIT",
+    "require": {
+        "php": "^7.4|^8.0",
+        "laravel/framework": "^7.0|^8.0",
+        "nette/php-generator": "^3.5"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.3",
+        "phpunit/phpunit": "^9.3.3"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Xamel\\LaravelGenerator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Xamel\\LaravelGenerator\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
